@@ -1,0 +1,615 @@
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <style>
+    
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        
+        body{
+            background-color:#fff;
+            font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+        }
+        
+        #page-wrapper{
+            position: relative;
+        }
+        
+        li{
+            list-style: none;
+        }
+        
+        a{
+           
+            text-decoration: none;
+            text-align: center;
+            
+        }
+        
+        
+        .container{
+            max-width: 1000px;
+            width:100%;
+            margin:0 auto;
+            
+        }
+        
+        .btn{
+            padding:0 20px;
+            height:40px;
+            font-size:1em;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 3px black solid;
+            border-radius:2px;
+            background: transparent;
+            cursor:pointer;
+        }
+        
+      header {
+  position: fixed;
+  top: 0;
+  min-height: 50px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1a1a1a;
+          width:100%;
+         
+          
+}
+       
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 50vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 20%;
+  height: 20%;
+  max-width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+     
+        
+        nav a{
+            color:#C3CBD7;
+            text-decoration: none;
+            font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            margin-right: 10px;
+        }
+        
+        nav > ul{
+              display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 38vw;
+            
+        }
+        
+ 
+        #apply{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 200px;
+            margin-top: 150px;
+             background-color: 	#f2f2f2;
+            padding:10px;
+           
+        }
+        
+            #apply > h2 {
+                margin-bottom: 20px;
+                word-wrap: break-word;
+                color:#1a1a1a;
+                font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-weight: 200;
+                font-size: 20px;
+                
+                   }
+
+            #apply input[type="email"] {
+                 max-width: 275px;
+                 width: 100%;
+                 padding: 5px;
+                 font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+                     }
+
+            #apply input[type="submit"] {
+                  max-width: 150px;
+                   width: 100%;
+                    height: 30px;
+                     margin: 15px 0;
+                       border: 0;
+                      font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+              color:#2997ff;
+                       /* background-color: #ff9900; */
+                           }
+
+           #apply input[type="submit"]:hover {
+                  background-color: #ffcc80;
+                   transition: background-color 1s;
+                      }
+
+          @media (max-width: 650px) {
+                 #apply {
+                   margin-top: 120px;
+                     }
+}
+        
+     
+        #about{
+            
+            margin-top: 50px;
+            align-items: center;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            color:#1a1a1a;
+            font-weight: 300;
+            padding:10px;
+           
+        }
+        
+        #why{
+            margin-top: 55px;
+            align-items: center;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            color:#1a1a1a;  
+        }
+        
+        .by{
+            margin-top: 50px;
+            align-items: center;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 200
+            font-size: 16px;
+            color:#1a1a1a;
+            background-color:#f2f2f2;
+        }
+        
+        .by img{
+            width: 20vw;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+             margin:0 auto;
+            margin-top: 30px;
+            
+        }
+        
+     
+        #course{
+            margin-top:30px;
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        
+        .product{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width:calc(100%/3);
+            margin:10px;
+           
+            margin-bottom: 50px;
+            border:1px solid #8c8c8c;
+            border-radius: 3px;
+            font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            color:#1a1a1a;
+            
+        }
+        
+        .product > .level {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+           
+          
+}
+        
+        .product > h2 {
+  margin-top: 15px;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 200;
+            color:#1a1a1a;
+           
+}
+
+.product > ol {
+  margin: 15px 0;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+ 
+  font-weight: 500;
+    color:#2997ff;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.product > button:hover {
+  background-color: #ffb84d;
+  transition: background-color 1s;
+}
+        
+        @media (max-width: 800px) {
+  #course {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+        
+        footer{
+            background-color:#1a1a1a;
+            border-top:1px solid #E6E6E6;
+            position:relative;
+            text-align: center;
+            z-index: 1;
+            display: block;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size:14px;
+            font-weight: 200;
+            color: #f2f2f2;
+            
+            
+        }  
+        
+        footer.container{
+            background: 0 0;
+           
+            
+        }
+        
+        footer.row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        .footer-social-list{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: transparent !important;
+            
+        }
+        
+        .footer-social-list li{
+            display: inline-block;
+        }
+        
+        .footer-social-list a{
+            margin:15px 10px;
+            font-size:25px;
+            display: inline-block;
+        }
+        
+        footer a{
+            color:#C3CBD7;
+        }
+        
+        .fa{
+            font-size: inherit;
+            text-rendering: auto;
+            display: inline-block;
+            
+        }
+        
+        footer p{
+            display: inline-block;
+            margin:15px 10px; 
+            font-size:14px;
+            color:#C3CBD7;
+            
+        }
+        
+        footer .footer-bottom{
+            color:#686E77;
+            padding:20px 0;
+            position: relative;
+            background-color:#1a1a1a;
+            
+}
+        
+        .justify-content-around{
+            justify-content: space-around !important;
+        }
+        
+        .row-flex{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        footer .footer-bottom a:first-child{
+            margin-left: 0;
+            
+        }
+        
+        footer .footer-bottom a{
+            margin-right: 5px;
+            font-size: 11px;
+            margin-bottom: 0;
+            color:#C3CBD7;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+    
+    </style>
+    
+    
+    </head>
+    
+    <body>
+    
+   <div id="page-wrapper">
+   <header id="header">
+       <div class="logo">
+        <img id="header-img" src="https://lh3.googleusercontent.com/4WkqBX6jwkq1qsaRe1nBUVxh0nneep4Cq-qAtWcu9ObQtn49YYi2M0g_XCJWOtW6juD4ZnY=s151"/>
+        
+        </div> 
+       
+    <nav id="nav-bar">
+        <ul>
+        <li><a class="nav-link" href="#about">About Us</a></li>
+
+            <li><a class="nav-link" href="#why">Why iTEFL?</a></li>
+           
+            <li><a class="nav-link" href="#course">TEFL Course</a></li>
+            
+            <li><a class="nav-link" href="#apply">Apply Now</a></li>
+            
+            <li><a class="nav-link" href="#contact">Contact Us</a></li>
+          
+        </ul>
+       
+       </nav>   
+       
+        </header>
+       
+       
+       <div class="container">
+           
+       <section id="apply">
+           
+           
+          <br><h2>Get professionally trained &#65120 start teaching now</h2>
+           <form id="form" action="https://www.freecodecamp.com/email-submit">
+               <input name="email" id="email" type="email" placeholder="Enter your email address" required>
+               <input id="submit" type="submit" value="Apply" class="btn">
+                
+           </form>
+       
+       </section>
+           </div>
+       
+       
+       
+       <div class="container">
+       
+       <section id="about">
+           
+           <h1>TEFL Online Certification</h1><br>
+           
+           <p>iTEFL is all about opening doors through education. In fact, that’s our mission statement.</p> <br>
+           <p>Our teachers and staff work hard everyday to make sure our students and customers are learning happily in an amazing environment.</p><br>
+           
+           <p>iTEFL Certification classes are only 4 weeks, full time, Monday-Friday.</p> <p>You can #stay at home and get certified.</p><br>
+           
+           <p>To find out more about iTEFL Programmes, check out our official YouTube channel.</p><br>
+           
+          <br> <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/bNE6ntaEkuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+           
+           </section>
+       </div>
+           
+           
+               <div class="container">
+               <section id="why">
+           
+           <h1>Why do I need a TEFL Certification?</h1><br>
+               
+               <p> Once you have completed your Professional 160 Hour or 120 Hour Course, you will quickly find that many different countries become available to live and work in.</p><br>
+                   <p>Employers are looking for people who have completed a 120-hour or 160-hour TEFL Course and are passionate about teaching. </p><br>
+               <p>Choose China, Korea, Japan, Taiwan, Thailand, Indonesia, Vietnam, Cambodia, Russia, Portugal, Italy or Poland.</p>
+                   <p>All of these countries offer excellent salaries, unrivalled travel opportunities and some destinations offer free flights and accommodation.</p><br>
+                   
+                 
+                   <div class="by">
+                   <ul class="by">
+           <li>
+      <br> <p><em>All Courses Accredited By</em></p>
+               <p class="thumbnail"></p>
+               <img src="images/accreditation-logo.jpg" alt="logo"><br>
+                  </li> 
+       
+         </ul>
+                   
+                   </div>
+        
+        </section>
+       </div>
+       
+      
+       <div class="container">
+           <h1 style="text-align: center; margin-top:50px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color:#BDDEFF; font-size:23px; font-weight: 400;padding: 5px 0;" >Get Qualified</h1>
+       <section id="course">
+           
+            <div class="product" id="middle">
+               <div class="level">Professional 120-Hour Online TEFL Course</div>
+               <h2>Price $150</h2>
+               <ol>
+                   <li>Internationally Accredited.</li>
+                   <li>VIP Job Assistance.</li>
+                   <li>Free:Activity and Grammar Book.</li>
+                  
+               </ol>
+               
+               <button class="btn">Buy Now</button>
+           
+            </div>
+           
+           
+           <div class="product" id="premium">
+               <div class="level">Professional 160-Hour Premier Online TEFL Course</div>
+               <h2>Price $200</h2>
+               <ol>
+                   <li>Internationally Accredited.</li>
+                   <li>VIP Job Assistance.</li>
+                   <li>Free:Activity and Grammar Book.</li>
+                   <li>Specialist Course:TEYL.</li>
+                   
+               </ol>
+               
+               <button class="btn">Buy Now</button>
+           
+            </div>
+           
+          
+           
+             <div class="product" id="low">
+               <div class="level">Professional 40-Hour Teaching English Online Course</div>
+               <h2>Price $50</h2>
+               <ol>
+                   <li>Internationally Accredited.</li>
+                   <li>VIP Job Assistance.</li>
+                   <li>Free:Activity and Grammar Book.</li>
+                  
+               </ol>
+               
+               <button class="btn">Buy Now</button>
+           
+            </div>
+         
+           </section>
+              
+                </div>
+        
+    <footer>
+        <section id="contact">
+        <div class="footer-top">
+        <div class="container">
+           <div class="row">
+            
+            <ul class="footer-social-list">
+               <li>
+                   <a href="#" target="_blank" class="fa fa-facebook"></a> 
+                </li>
+                 <li>
+                     <a href="#" class="fa fa-instagram"></a>
+                </li>
+                     <li>
+                         <a href="#" class="fa fa-twitter"></a>
+                </li>
+                
+                
+               </ul>
+            
+            </div> 
+           
+            </div>        
+        
+        </div>
+            
+            <p>+443308280042</p>
+                    <p>contact@itefl.com</p>
+                    <p>19 Elery Road</p>
+                    <p>London</p>
+                    <p>WC1N 3AX</p>
+            
+            
+            </section>
+        
+       
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row-flex justify-content-around">
+                    <a href="#" target="_blank">&copy 2020 iTEFL. All rights reserved.</a>
+                <a href="#" target="_blank">Cookie Policy</a>
+                    <a href="#" target="_blank">Privacy Policy</a>
+                    <a href="#" target="_blank">Terms&#65120Conditions</a>
+               
+                </div>
+            
+            </div>
+        
+        </div>
+        
+    
+       </footer>
+           </div>
+    </body>
+     
+</html>
